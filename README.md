@@ -1,22 +1,43 @@
-# CSCI-4022-Final-Project-
-Final project for the advanced data science class.
+# 📰 Fake News Detection with Unsupervised Learning  
+*Advanced Data Science Final Project (CSCI 4022)*  
+**John Danekind & Daniel Hatakeyama**
 
-Doing fake news detection and comparing KMeans clustering to other supervised methods. 
+---
 
+## 📌 Project Overview
 
+This project explores the effectiveness of **unsupervised learning methods**—specifically clustering techniques like **K-Means with TF-IDF** and **MinHash with Jaccard distance**—in detecting fake news without using labeled data.
 
-Create conda environment: 
-```
+While most fake news detection systems rely on large, supervised models, we ask a simpler question:  
+**Can document similarity alone separate real news from fake?**
+
+To benchmark our unsupervised approaches, we also compare them with a lightweight **logistic regression** classifier.
+
+---
+
+## 🔍 Methods Used
+
+- **Data Source:** Kaggle’s Fake and Real News Dataset  
+- **Techniques:**
+  - Text cleaning and preprocessing
+  - TF-IDF vectorization and PCA
+  - Jaccard distance with custom MinHash implementation
+  - K-Means clustering (unsupervised)
+  - Logistic regression (supervised baseline)
+
+---
+
+## 🧪 Key Takeaways
+
+- **TF-IDF + KMeans** showed modest accuracy (~62%) in distinguishing fake vs. real articles.
+- **MinHash + Jaccard** struggled to provide meaningful separation.
+- **Logistic Regression** achieved much higher performance (~96%) using labels.
+- Unsupervised methods may still offer value as fast, low-cost filters in label-scarce environments.
+
+---
+
+## ⚙️ Setup
+
+Create the environment manually:
+```bash
 conda create -n ads_final_project_env python=3.12
-```
-
-You should be able to create your conda environment by using:
-```
-conda env create -f environment.yml
-```
-if you have access to the environment.yml file (conda equivalent of requirements.txt)
-
-Then activate the environment with
-```
-conda activate ads_final_project_env
-```
